@@ -1,0 +1,53 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Generate tests (file)",
+      "type": "python",
+      "request": "launch",
+      "module": "testgen.cli",
+      "args": [
+        "generate",
+        "--file",
+        "src/math_utils.py"
+      ],
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "Generate tests (dir)",
+      "type": "python",
+      "request": "launch",
+      "module": "testgen.cli",
+      "args": [
+        "generate",
+        "--dir",
+        "src"
+      ],
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "Run pytest",
+      "type": "python",
+      "request": "launch",
+      "module": "pytest",
+      "args": [],
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "Auto-repair math_utils",
+      "type": "python",
+      "request": "launch",
+      "module": "testgen.cli",
+      "args": [
+        "repair",
+        "--module",
+        "math_utils"
+      ],
+      "console": "integratedTerminal",
+      "justMyCode": true
+    }
+  ]
+}
